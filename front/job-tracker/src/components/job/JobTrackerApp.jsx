@@ -6,7 +6,7 @@ class JobTrackerApp extends Component {
     return (
       <div className="JobTrackerApp">
         <Router>
-        <HeaderComponent />
+          <HeaderComponent />
           <Switch>
             <Route path="/" exact component={LoginComponent} />
             <Route path="/login" component={LoginComponent} />
@@ -14,34 +14,32 @@ class JobTrackerApp extends Component {
             <Route path="/jobs" component={ListJobsComponent} />
             <Route component={ErrorComponent} />
           </Switch>
-        <FooterComponent />  
+          <FooterComponent />
         </Router>
       </div>
     );
   }
 }
 
-class HeaderComponent extends Component{
-    render(){
-        return(
-            <div>
-                Header <hr/>
-            </div>
-        )
-    }
+class HeaderComponent extends Component {
+  render() {
+    return (
+      <div>
+        Header <hr />
+      </div>
+    );
+  }
 }
 
-class FooterComponent extends Component{
-    render(){
-        return(
-            <div>
-               <hr/> Footer
-            </div>
-        )
-    }
+class FooterComponent extends Component {
+  render() {
+    return (
+      <div>
+        <hr /> Footer
+      </div>
+    );
+  }
 }
-
-
 
 class ListJobsComponent extends Component {
   constructor(props) {
@@ -50,20 +48,12 @@ class ListJobsComponent extends Component {
       jobs: [
         {
           id: 1,
-          description: "Fullstack Developer",
+          jobTitle: "Fullstack Developer",
+          company: "Apple",
+          link: "www.apple.com",
           status: "Following",
           date: new Date(),
-        },
-        { 
-          id: 2, 
-          description: "IT Support", 
-          status: "Following",
-          date: new Date() },
-        {
-          id: 3,
-          description: "Japanese Translator",
-          status: "Following",
-          date: new Date(),
+          notes: "you can do it",
         },
       ],
     };
@@ -77,18 +67,25 @@ class ListJobsComponent extends Component {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Description</th>
+              <th>Job Title</th>
+              <th>Company</th>
+              <th>Link</th>
               <th>Status</th>
               <th>Date</th>
+              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
             {this.state.jobs.map((job) => (
               <tr>
                 <td>{job.id}</td>
-                <td>{job.description}</td>
+                <td>{job.jobTitle}</td>
+                <td>{job.company}</td>
+                <td>{job.link}</td>
                 <td>{job.status}</td>
                 <td>{job.date.toString()}</td>
+                <td>{job.notes}</td>
+                <td></td>
               </tr>
             ))}
           </tbody>

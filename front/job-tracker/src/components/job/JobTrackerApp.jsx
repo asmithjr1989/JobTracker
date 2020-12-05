@@ -1,5 +1,5 @@
 //GITHUB PUSH TEST
- 
+
 import React, { Component } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
@@ -28,17 +28,25 @@ class HeaderComponent extends Component {
   render() {
     return (
       <header>
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark" >
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <div>
             <a>jobTracker</a>
           </div>
-          <ul className="navbar-nav" >
-            <li className="nav-link"><Link to="/welcome/asmithjr">Home</Link></li>
-            <li className="nav-link"><Link to="/jobs">Applications</Link></li>
+          <ul className="navbar-nav">
+            <li className="nav-link">
+              <Link to="/welcome/asmithjr">Home</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/jobs">Applications</Link>
+            </li>
           </ul>
           <ul className="navbar-nav navbar-collapse justify-content-end">
-            <li className="nav-link"><Link to="/login">Login</Link></li>
-            <li className="nav-link"><Link to="/logout">Logout</Link></li>
+            <li className="nav-link">
+              <Link to="/login">Login</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/logout">Logout</Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -49,23 +57,21 @@ class HeaderComponent extends Component {
 class FooterComponent extends Component {
   render() {
     return (
-     <footer className="footer">
-       <span className="text-muted">the world is yours</span>
-     </footer>
+      <footer className="footer">
+        <span className="text-muted">the world is yours</span>
+      </footer>
     );
   }
 }
 
 class LogoutComponent extends Component {
-  render(){
+  render() {
     return (
       <div>
         <h1>Good Bye "wave emoji"</h1>
-        <div className="container">
-          Happy Hunting
-        </div>
+        <div className="container">Happy Hunting</div>
       </div>
-    )
+    );
   }
 }
 
@@ -91,7 +97,11 @@ class ListJobsComponent extends Component {
     return (
       <div>
         <h1>Jobs</h1>
-        <table>
+
+        <div className="container">
+
+
+        <table className="table">
           <thead>
             <tr>
               <th>ID</th>
@@ -118,6 +128,7 @@ class ListJobsComponent extends Component {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     );
   }
@@ -127,8 +138,12 @@ class WelcomeComponent extends Component {
   render() {
     return (
       <div>
-        Welcome {this.props.match.params.name}, To Job Application Tracker. You
-        can manage your jobs <Link to="/jobs">here</Link>
+      <h1>Welcome!</h1>
+      <div className="container">
+             Welcome {this.props.match.params.name}, To Job Application Tracker. You
+             can manage your jobs <Link to="/jobs">here</Link>
+   
+      </div>
       </div>
     );
   }
@@ -176,8 +191,12 @@ class LoginComponent extends Component {
   render() {
     return (
       <div>
+        <h1>Login</h1>
+        <div className="container"> </div>
         {this.state.showSuccessfulMessage && <div>Login Successful</div>}
-        {this.state.hasLoginFailed && <div>Invalid Credentials</div>}
+        {this.state.hasLoginFailed && 
+          <div className="alert alert-warning">Invalid Credentials</div>
+        }
         UserName:{" "}
         <input
           type="text"
@@ -192,7 +211,9 @@ class LoginComponent extends Component {
           value={this.state.password}
           onChange={this.handleChange}
         />
-        <button onClick={this.loginClicked}>Login</button>
+        <button className="btn btn-success" onClick={this.loginClicked}>
+          Login
+        </button>
       </div>
     );
   }

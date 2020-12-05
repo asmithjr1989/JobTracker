@@ -1,5 +1,5 @@
 //GITHUB PUSH TEST
-
+ 
 import React, { Component } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
@@ -14,6 +14,7 @@ class JobTrackerApp extends Component {
             <Route path="/login" component={LoginComponent} />
             <Route path="/welcome/:name" component={WelcomeComponent} />
             <Route path="/jobs" component={ListJobsComponent} />
+            <Route path="/logout" component={LogoutComponent} />
             <Route component={ErrorComponent} />
           </Switch>
           <FooterComponent />
@@ -37,7 +38,7 @@ class HeaderComponent extends Component {
           </ul>
           <ul className="navbar-nav navbar-collapse justify-content-end">
             <li className="nav-link"><Link to="/login">Login</Link></li>
-            <li className="nav-link">Logout</li>
+            <li className="nav-link"><Link to="/logout">Logout</Link></li>
           </ul>
         </nav>
       </header>
@@ -48,10 +49,23 @@ class HeaderComponent extends Component {
 class FooterComponent extends Component {
   render() {
     return (
-      <div>
-        <hr /> Footer
-      </div>
+     <footer className="footer">
+       <span className="text-muted">the world is yours</span>
+     </footer>
     );
+  }
+}
+
+class LogoutComponent extends Component {
+  render(){
+    return (
+      <div>
+        <h1>Good Bye "wave emoji"</h1>
+        <div className="container">
+          Happy Hunting
+        </div>
+      </div>
+    )
   }
 }
 

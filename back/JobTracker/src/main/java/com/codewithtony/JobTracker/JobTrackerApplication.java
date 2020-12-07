@@ -1,13 +1,13 @@
-package com.codewithtony.jobtraker;
+package com.codewithtony.JobTracker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JobtrakerApplication {
+public class JobTrackerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JobtrakerApplication.class, args);
+		SpringApplication.run(JobTrackerApplication.class, args);
 	}
 
 }

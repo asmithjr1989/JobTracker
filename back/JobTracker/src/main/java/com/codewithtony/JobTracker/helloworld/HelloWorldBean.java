@@ -1,4 +1,4 @@
-package com.codewithtony.JobTracker;
+package com.codewithtony.JobTracker.helloworld;
 
 public class HelloWorldBean {
 

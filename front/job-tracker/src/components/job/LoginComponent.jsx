@@ -23,7 +23,6 @@ class LoginComponent extends Component {
     }
   
     loginClicked() {
-      //admin,password
       if (
         this.state.username === "asmithjr" &&
         this.state.password === "icandoit"

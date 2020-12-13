@@ -12,12 +12,12 @@ class ListJobsComponent extends Component {
     };
 
     this.deleteJobClicked = this.deleteJobClicked.bind(this);
+    this.updateJobClicked = this.updateJobClicked.bind(this);
     this.refreshJobTable = this.refreshJobTable.bind(this);
+    this.addJobClicked = this.addJobClicked.bind(this);
   }
 
   componentDidMount() {
-    console.log('componentDidMount')
-
     this.refreshJobTable()
     console.log(this.state)
   }
@@ -38,13 +38,16 @@ class ListJobsComponent extends Component {
   }
 
   updateJobClicked(id) {
-    console.log('update clicked : ' + id)
     this.props.history.push(`/jobs/${id}`);
 
     // let username = AuthenticationService.getLoggedInUserName();
     // JobsDataService.deleteJob(username, id).then(response => {
     //  this.setState({message:`deletion of job ${id} Successful`})
     //  this.refreshJobTable()
+    }
+
+    addJobClicked(){
+      this.props.history.push(`/jobs/-1`);
     }
   
 
@@ -100,6 +103,11 @@ class ListJobsComponent extends Component {
               ))}
             </tbody>
           </table>
+
+          <div className="row">
+            <button className="btn btn-success" onClick={this.addJobClicked}>Add</button>
+
+          </div>
         </div>
       </div>
     );

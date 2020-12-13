@@ -50,6 +50,18 @@ public class JobHardcodedService {
     return jobs;
   }
 
+
+  public  Job save(Job job){
+    if(job.getId() == -1 || job.getId()==0){
+      job.setId(++idCounter);
+      jobs.add(job);
+    }else{
+      deleteById(job.getId());
+      jobs.add(job);
+    }
+    return job;
+  }
+
   public Job deleteById(Long id) {
     Job job = findById(id);
 

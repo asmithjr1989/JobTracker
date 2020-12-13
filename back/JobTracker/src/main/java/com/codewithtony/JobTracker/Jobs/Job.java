@@ -1,12 +1,14 @@
 package com.codewithtony.JobTracker.Jobs;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Job {
 
     private long id;
     private String username;
     private String jobTitle;
+    private String company;
     private String webLink;
     private String status;
     private Date appliedDate;
@@ -15,10 +17,11 @@ public class Job {
     public Job() {
     }
 
-    public Job(long id, String username, String jobTitle, String webLink, String status, Date appliedDate, String notes) {
+    public Job(long id, String username, String jobTitle, String company, String webLink, String status, Date appliedDate, String notes) {
         this.id = id;
         this.username = username;
         this.jobTitle = jobTitle;
+        this.company = company;
         this.webLink = webLink;
         this.status = status;
         this.appliedDate = appliedDate;
@@ -81,16 +84,38 @@ public class Job {
         this.notes = notes;
     }
 
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
     @Override
     public String toString() {
-        return "Jobs{" +
+        return "Job{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", jobTitle='" + jobTitle + '\'' +
+                ", company='" + company + '\'' +
                 ", webLink='" + webLink + '\'' +
                 ", status='" + status + '\'' +
                 ", appliedDate=" + appliedDate +
                 ", notes='" + notes + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Job job = (Job) o;
+        return id == job.id && Objects.equals(username, job.username) && Objects.equals(jobTitle, job.jobTitle) && Objects.equals(company, job.company) && Objects.equals(webLink, job.webLink) && Objects.equals(status, job.status) && Objects.equals(appliedDate, job.appliedDate) && Objects.equals(notes, job.notes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, jobTitle, company, webLink, status, appliedDate, notes);
     }
 }

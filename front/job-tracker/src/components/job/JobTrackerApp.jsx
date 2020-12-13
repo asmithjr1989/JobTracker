@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AuthenticatedRoute from "./AuthenticatedRoute.jsx";
 import LoginComponent from "./LoginComponent.jsx";
 import ListJobsComponent from "./ListJobComponent.jsx";
-import  ErrorComponent  from "./ErrorComponent";
-import HeaderComponent from './HeaderComponent';
-import FooterComponent from './FooterComponent';
-import WelcomeComponent from './WelcomeComponent';
-import LogoutComponent from './LogoutComponent'
+import ErrorComponent from "./ErrorComponent";
+import HeaderComponent from "./HeaderComponent";
+import FooterComponent from "./FooterComponent";
+import WelcomeComponent from "./WelcomeComponent";
+import LogoutComponent from "./LogoutComponent";
+import JobComponent from "./JobComponent.jsx";
 
 class JobTrackerApp extends Component {
   render() {
@@ -22,6 +23,7 @@ class JobTrackerApp extends Component {
               path="/welcome/:name"
               component={WelcomeComponent}
             />
+            <AuthenticatedRoute path="/jobs/:id" component={JobComponent} />
             <AuthenticatedRoute path="/jobs" component={ListJobsComponent} />
             <AuthenticatedRoute path="/logout" component={LogoutComponent} />
             <Route component={ErrorComponent} />

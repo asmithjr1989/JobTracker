@@ -78,7 +78,7 @@ class ListJobsComponent extends Component {
                   <td>{job.company}</td>
                   <td>{job.webLink}</td>
                   <td>{job.status}</td>
-                  <td>{moment(job.appliedDate).format("YYYY-MM-DD")}</td>
+                  <td>{moment(job.appliedDate).format("MM-DD-YYYY")}</td>
                   <td>{job.notes}</td>
 
                   <td>

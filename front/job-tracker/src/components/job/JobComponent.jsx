@@ -33,7 +33,7 @@ class JobComponent extends Component {
         jobTitle: response.data.jobTitle,
         company: response.data.company,
         webLink: response.data.webLink,
-        status: response.data.webLink,
+        status: response.data.status,
         appliedDate: moment(response.data.appliedDate).format("YYYY-MM-DD"),
         notes: response.data.notes,
       })

@@ -52,7 +52,7 @@ public class JobHardcodedService {
 
 
   public  Job save(Job job){
-    if(job.getId() == -1 || job.getId()==0){
+    if(job.getId() == -1 || job.getId()==0l){
       job.setId(++idCounter);
       jobs.add(job);
     }else{

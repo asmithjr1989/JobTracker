@@ -10,8 +10,22 @@ class HelloWorldService{
         return Axios.get('http://localhost:8080/hello-world-bean');
     }
 
-    executeHelloWorldPathVariableService(name){
-        return Axios.get(`http://localhost:8080/hello-world/path-variable/${name}`);
+    executeHelloWorldPathVariableService(name) {
+        //console.log('executed service')
+        // let username = 'asmithjr'
+        // let password = 'dummy'
+
+        // let basicAuthHeader = 'Basic ' +  window.btoa(username + ":" + password)
+
+        return Axios.get(`http://localhost:8080/hello-world/path-variable/${name}`)
+        // , 
+        //     {
+        //         headers : {
+        //             authorization: basicAuthHeader
+        //         }
+        //     }
+        // );        
+    //}
     }
 
 }

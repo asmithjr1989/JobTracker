@@ -9,12 +9,11 @@ class HeaderComponent extends Component {
   
   render() {
     const isUserLoggedIn = AuthenticationService.isUserLoggedIn();
-    console.log(isUserLoggedIn);
     return(
       <header>
         <nav className="navbar navbar-expand-md navbar-light bg-light">
           <div>
-            <a>jobTracker</a>
+            <a href="/#">jobTracker</a>
           </div>
           <ul className="navbar-nav">
             <li className="nav-link">

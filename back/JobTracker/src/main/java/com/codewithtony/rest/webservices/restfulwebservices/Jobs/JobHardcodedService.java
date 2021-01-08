@@ -1,6 +1,7 @@
-package com.codewithtony.JobTracker.Jobs;
+package com.codewithtony.rest.JobTracker.restfulwebservices.Jobs;
 
 import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

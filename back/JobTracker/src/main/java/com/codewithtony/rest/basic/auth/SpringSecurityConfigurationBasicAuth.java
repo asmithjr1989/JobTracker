@@ -1,4 +1,5 @@
-package com.codewithtony.JobTracker.basic.auth;
+package com.codewithtony.rest.basic.auth;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

@@ -1,4 +1,5 @@
-package com.codewithtony.JobTracker.helloworld;
+package com.codewithtony.rest.JobTracker.restfulwebservices.helloworld;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

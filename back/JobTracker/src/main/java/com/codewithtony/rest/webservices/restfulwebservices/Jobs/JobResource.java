@@ -1,4 +1,4 @@
-package com.codewithtony.JobTracker.Jobs;
+package com.codewithtony.rest.JobTracker.restfulwebservices.Jobs;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

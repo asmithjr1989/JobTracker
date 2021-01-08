@@ -1,4 +1,4 @@
-package com.codewithtony.JobTracker.Jobs;
+package com.codewithtony.rest.JobTracker.restfulwebservices.Jobs;
 
 import java.util.Date;
 import java.util.Objects;

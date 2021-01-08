@@ -1,4 +1,4 @@
-package com.codewithtony.rest.JobTracker.restfulwebservices.jwt.resource;
+package com.codewithtony.rest.webservices.restfulwebservices.jwt.resource;
 
 import java.io.Serializable;
 

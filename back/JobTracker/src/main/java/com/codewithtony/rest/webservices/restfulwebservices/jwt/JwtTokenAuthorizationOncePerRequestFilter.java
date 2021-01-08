@@ -1,4 +1,4 @@
-package com.codewithtony.rest.JobTracker.restfulwebservices.jwt;
+package com.codewithtony.rest.webservices.restfulwebservices.jwt;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import org.slf4j.Logger;

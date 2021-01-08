@@ -36,7 +36,7 @@ class AuthenticationService {
 
   setupAxiosInterceptors() {
     let username = "asmithjr";
-    let password = "dummy";
+    let password = "icandoit";
 
     let basicAuthHeader = "Basic " + window.btoa(username + ":" + password);
 

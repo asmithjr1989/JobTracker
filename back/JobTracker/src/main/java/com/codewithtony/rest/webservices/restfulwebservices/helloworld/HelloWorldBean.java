@@ -1,4 +1,4 @@
-package com.codewithtony.rest.JobTracker.restfulwebservices.helloworld;
+package com.codewithtony.rest.webservices.restfulwebservices.helloworld;
 
 public class HelloWorldBean {
 

@@ -1,25 +1,30 @@
 import Axios from "axios"
+import { API_URL } from "../../Constants";
 
 class JobsDataService {    
-    
     retrieveAllJobs(name){
-        return Axios.get(`http://localhost:8080/users/${name}/jobs`)
+        //console.log('executed service')
+        return Axios.get(`${API_URL}/users/${name}/jobs`)
     }  
 
     retrieveJob(name,id){
-        return Axios.get(`http://localhost:8080/users/${name}/jobs/${id}`)
+        //console.log('executed service')
+        return Axios.get(`${API_URL}/users/${name}/jobs/${id}`)
     }
     
     deleteJob(name, id){
-        return Axios.delete(`http://localhost:8080/users/${name}/jobs/${id}`)
+        //console.log('executed service')
+        return Axios.delete(`${API_URL}/users/${name}/jobs/${id}`)
     }
 
     updateJob(name, id, job){
-        return Axios.put(`http://localhost:8080/users/${name}/jobs/${id}`, job)
+        //console.log('executed service')
+        return Axios.put(`${API_URL}/users/${name}/jobs/${id}`, job)
     }
 
     createJob(name, job){
-        return Axios.post(`http://localhost:8080/users/${name}/jobs`)
+        //console.log('executed service')
+        return Axios.post(`${API_URL}/users/${name}/jobs`, job)
     }
 
 }

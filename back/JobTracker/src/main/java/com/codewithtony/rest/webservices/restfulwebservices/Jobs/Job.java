@@ -1,11 +1,17 @@
 package com.codewithtony.rest.webservices.restfulwebservices.Jobs;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
 
+@Entity
 public class Job {
 
-    private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(sequenceName = "jobIdSeq",
+            name = "JOB_SEQ", allocationSize = 1, initialValue = 1)
+    private Long id;
     private String username;
     private String jobTitle;
     private String company;
@@ -14,8 +20,7 @@ public class Job {
     private Date appliedDate;
     private String notes;
 
-    public Job() {
-    }
+
 
     public Job(long id, String username, String jobTitle, String company, String webLink, String status, Date appliedDate, String notes) {
         this.id = id;
@@ -28,11 +33,15 @@ public class Job {
         this.notes = notes;
     }
 
-    public long getId() {
+    public Job() {
+      super();
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

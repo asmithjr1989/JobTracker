@@ -10,7 +10,7 @@ import java.util.List;
 public class JobHardcodedService {
 
   private static List<Job> jobs = new ArrayList<>();
-  private static int idCounter = 0;
+  private static long idCounter = 0;
 
   static {
     jobs.add(
